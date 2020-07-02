@@ -1,4 +1,4 @@
-// v 1.0.0
+// v 1.0.1
 
 // imports
 const request = require('request');
@@ -91,7 +91,7 @@ const write = function write(records, fileName) {
     };
 
     const time = function(time) {
-        return Math.floor(time / 60) + ':' + (time % 60);
+        return Math.floor(time / 60) + ':' + ('0' + (time % 60)).slice(-2);
     };
 
     // UTF-8のCSVはEXCELで開くと文字化けするんでBOM足す
